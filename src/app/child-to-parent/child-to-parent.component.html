@@ -1,5 +1,5 @@
 <div class="box">
     <p>This is parent component</p>
-    <app-parent (i)="show($event)"></app-parent>
+    <app-parent (dataEmitter)="receiveData($event)"></app-parent>
     {{comingdata}}
 </div>

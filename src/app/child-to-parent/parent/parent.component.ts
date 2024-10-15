@@ -7,10 +7,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ParentComponent {
 
-  @Output() i:any =  new EventEmitter<number>;
+  i: number = 0;
+  @Output() dataEmitter: any = new EventEmitter<number>();
 
   sendData(){
-    this.i.emit(this.i+=1)
+    this.i+=1;
+    this.dataEmitter.emit(this.i);
   }
 
 }

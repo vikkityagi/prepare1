@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./child-to-parent.component.css']
 })
 export class ChildToParentComponent {
-  comingdata!: number;
+  comingdata: any = 0;
 
-  show(i:number){
-    this.comingdata = i;
+  receiveData(data:any){
+    console.log('i',data);
+    this.comingdata = data;
+
   }
 
 }
